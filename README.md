@@ -27,11 +27,7 @@ pip install selenium webdriver_manager ollama
 
 Make sure you have Google Chrome installed. The `webdriver_manager` will automatically handle the installation of ChromeDriver for the appropriate version of Chrome.
 
-### 2. Ollama API Key
-
-You need to have access to the Ollama API to use its chat capabilities. Make sure you have a valid Ollama API key, which the script uses to process the chat.
-
-### 3. WhatsApp Web
+### 2. WhatsApp Web
 
 The bot will interact with WhatsApp Web. When running the bot for the first time, it will ask you to scan the QR code to log into your WhatsApp account. Once authenticated, the bot will monitor unread messages and send responses.
 
@@ -74,7 +70,6 @@ Once logged in, the bot will monitor unread messages and respond to them automat
 
 - **QR Code Scanning**: If the QR code is not being scanned within the time limit, increase the `time.sleep()` in the `start_whatsapp()` function to give more time for authentication.
 - **WebDriver Issues**: Ensure that you have Google Chrome installed and the `webdriver_manager` is correctly downloading the appropriate version of ChromeDriver.
-- **Ollama API Errors**: Ensure your Ollama API key is set up properly and that your account has sufficient credits to use the chat model.
 
 ## License
 
