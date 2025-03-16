@@ -38,7 +38,7 @@ The bot will interact with WhatsApp Web. When running the bot for the first time
 After installing the necessary dependencies, simply run the `whatsapp_bot()` function by executing the script:
 
 ```bash
-python whatsapp_bot.py
+python whats.py
 ```
 
 ### 2. Scan the QR Code
