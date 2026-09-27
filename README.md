@@ -11,14 +11,13 @@ Before running the project, you need to install the following dependencies:
 - `selenium`: For automating the web browser interactions.
 - `webdriver_manager`: For managing the ChromeDriver installation.
 - `ollama`: For processing the chat messages and generating responses.
-- `time`: For handling delays between actions.
 
 ### Install Dependencies
 
 You can install the required dependencies using `pip`:
 
 ```bash
-pip install selenium webdriver_manager ollama
+pip install -r requirements.txt
 ```
 
 ## Setup and Configuration
@@ -30,6 +29,10 @@ Make sure you have Google Chrome installed. The `webdriver_manager` will automat
 ### 2. WhatsApp Web
 
 The bot will interact with WhatsApp Web. When running the bot for the first time, it will ask you to scan the QR code to log into your WhatsApp account. Once authenticated, the bot will monitor unread messages and send responses.
+
+### 3. Ollama
+
+Install [Ollama](https://ollama.com) and pull a model (`ollama pull llama3.2`). The bot uses `llama3.2` by default; set the `OLLAMA_MODEL` environment variable to use a different one.
 
 ## How to Run the Bot
 
@@ -73,4 +76,6 @@ Once logged in, the bot will monitor unread messages and respond to them automat
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
+
+> Automating WhatsApp Web is not endorsed by WhatsApp. This is an experiment for personal use.

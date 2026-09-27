@@ -1,3 +1,4 @@
+import os
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -6,6 +7,8 @@ from ollama import chat
 from ollama import ChatResponse
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
+
+OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "llama3.2")
 
 def start_whatsapp():
     service = Service(ChromeDriverManager().install())
@@ -41,7 +44,7 @@ def respond_with_ollama(messages):
         return ""
     
     chat_history = [{"role": "user", "content": message} for message in messages]
-    response: ChatResponse = chat(model='llama3.2', messages=chat_history)
+    response: ChatResponse = chat(model=OLLAMA_MODEL, messages=chat_history)
     return response['message']['content']
 
 def send_message(driver, message):
